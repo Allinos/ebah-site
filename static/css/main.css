@@ -258,6 +258,17 @@ textarea:invalid {
 	background-color: #666;
 }
 */
+#iso{
+  position: absolute;
+  top: 0rem;
+  width: 50px;
+  aspect-ratio: 1;
+  left: 10px;
+  mix-blend-mode: color-burn;
+  background: black;
+  border-radius: 13%;
+
+}
 .label-subs {
   position: relative;
 }
