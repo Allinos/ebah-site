@@ -258,7 +258,7 @@ textarea:invalid {
 	background-color: #666;
 }
 */
-#iso{
+/* #iso{
   position: absolute;
   top: 0rem;
   width: 50px;
@@ -268,7 +268,7 @@ textarea:invalid {
   background: black;
   border-radius: 13%;
 
-}
+} */
 .label-subs {
   position: relative;
 }
@@ -11685,6 +11685,9 @@ textarea.custom-input {
 
 @media (min-width: 1560px) {
   .an-awards__image {
+    width: 800px;
+  }
+  #bg-img{
     width: 900px;
   }
 }
@@ -11692,8 +11695,22 @@ textarea.custom-input {
 .an-awards__image img {
   max-width: 100%;
   height: auto;
+  border-radius: 5px;
+  border: 5px solid #ffff66;
 }
-
+#bg-img{
+  position: absolute;
+  max-width: 100%;
+  width: 80%;
+  height: 80%;
+  font-weight: 600;
+  top: -30px;
+  left: -7px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: -1;
+  background: linear-gradient(to bottom right, #ffff66 0%, #ff9966 100%);
+}
 @media (min-width: 768px) {
   .an-awards__content {
     padding-right: 0;
