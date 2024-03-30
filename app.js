@@ -44,4 +44,4 @@ app.get('*', (req, res) => {
     res.status(200).render(path.join(__dirname, '/views/404.ejs'))
 })
 
-app.listen(PORT, () => { console.log(PORT); })
+app.listen(PORT, () => { console.log(`Site is running on port ${PORT}`); })
