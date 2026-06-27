@@ -87,11 +87,210 @@
     .item-14 {
         grid-row: 11/13;
     }
+
+    .recent-projects {
+        padding: 60px 0 40px;
+        background: linear-gradient(180deg, rgba(2, 2, 11, 0.96) 0%, rgba(2, 2, 11, 0.98) 100%);
+        color: #fff;
+    }
+
+    .recent-projects__header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 36px;
+    }
+
+    .recent-projects__title {
+        margin: 0;
+        font-size: 2.55rem;
+        line-height: 1.05;
+        letter-spacing: 0.04em;
+    }
+
+    .recent-projects__text {
+        max-width: 600px;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .recent-projects__slider {
+        position: relative;
+    }
+
+    .recent-projects__slide {
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 246, 43, 0.16);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .recent-projects__slide img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .recent-projects__meta {
+        padding: 24px;
+    }
+
+    .recent-projects__category {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #fff62b;
+    }
+
+    .recent-projects__name {
+        margin: 0 0 12px;
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .recent-projects__summary {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.8;
+    }
+
+    .recent-projects__navigation {
+        position: absolute;
+        bottom: 18px;
+        right: 18px;
+        display: flex;
+        gap: 14px;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 10px;
+        border-radius: 999px;
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .recent-projects__button {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .recent-projects__button:hover {
+        background: rgba(255, 246, 43, 0.18);
+        transform: translateY(-2px);
+    }
+
+    .recent-projects__button svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+    }
+
+    @media (max-width: 991px) {
+        .recent-projects__navigation {
+            right: 50%;
+            left: 50%;
+            transform: translateX(50%);
+            bottom: 12px;
+            padding: 8px 12px;
+        }
+
+        .recent-projects__button {
+            width: 46px;
+            height: 46px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .recent-projects {
+            padding: 40px 0;
+        }
+
+        .recent-projects__title {
+            font-size: 2rem;
+        }
+
+        .recent-projects__header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 </style>
 
 <body class="webpage">
     <%- include('./partials/header.ejs') %>
 
+    <section class="recent-projects">
+      <div class="container">
+        <div class="recent-projects__header">
+          <div>
+            <div class="latest-projects__preheading">Recent Work</div>
+            <h2 class="recent-projects__title heading">Latest Projects Spotlight</h2>
+          </div>
+          <p class="recent-projects__text">Discover the freshest architecture, interior, exterior, and art projects from EBAH. This unique responsive slider highlights our recent design direction in a polished, modern layout.</p>
+        </div>
+
+        <div class="recent-projects__slider swiper-container __js_recent-projects-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide recent-projects__slide">
+              <img src="img/u/projects/interior/saved_resource.png" alt="Interior Harmony">
+              <div class="recent-projects__meta">
+                <div class="recent-projects__category">Interior</div>
+                <h3 class="recent-projects__name">Interior Harmony</h3>
+                <p class="recent-projects__summary">A warm, spacious interior environment with timeless materials and stylish details.</p>
+              </div>
+            </div>
+            <div class="swiper-slide recent-projects__slide">
+              <img src="img/u/projects/exterior/saved_resource.jpg" alt="Exterior Facade">
+              <div class="recent-projects__meta">
+                <div class="recent-projects__category">Exterior</div>
+                <h3 class="recent-projects__name">Exterior Facade</h3>
+                <p class="recent-projects__summary">Striking outdoor form and bold facade composition for modern architectural impact.</p>
+              </div>
+            </div>
+            <div class="swiper-slide recent-projects__slide">
+              <img src="img/u/projects/art/art1_mgwg.png" alt="Abstract Art">
+              <div class="recent-projects__meta">
+                <div class="recent-projects__category">Art</div>
+                <h3 class="recent-projects__name">Abstract Art</h3>
+                <p class="recent-projects__summary">A creative art installation celebrating contrast, texture, and layered composition.</p>
+              </div>
+            </div>
+            <div class="swiper-slide recent-projects__slide">
+              <img src="img/u/projects/interior/saved_resource(1).png" alt="Lounge Ambience">
+              <div class="recent-projects__meta">
+                <div class="recent-projects__category">Interior</div>
+                <h3 class="recent-projects__name">Lounge Ambience</h3>
+                <p class="recent-projects__summary">Relaxed lounge design with elegant finishes and a refined atmosphere.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-projects__navigation">
+            <button class="recent-projects__button recent-projects__button--prev" type="button" aria-label="Previous project">
+              <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="recent-projects__button recent-projects__button--next" type="button" aria-label="Next project">
+              <svg viewBox="0 0 24 24"><path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
         <br><br>
         <section class="webpage__type-service type-service">
@@ -149,48 +348,34 @@
         </section>
         <%- include('./partials/footer.ejs') %>
         <!-- Optional JavaScript-->
-        <!-- <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.pagepiling.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.easy_number_animate.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/packery-mode.pkgd.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/animsition.min.js"></script> -->
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/jquery.pagepiling.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.easy_number_animate.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/packery-mode.pkgd.min.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/animsition.min.js"></script>
         <!-- JavaScript-->
         <script>
-            var gallery = document.querySelector('#gallery');
-            var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
-            var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
-            var resizeAll = function () {
-                var altura = getVal(gallery, 'grid-auto-rows');
-                var gap = getVal(gallery, 'grid-row-gap');
-                gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-                    var el = item;
-                    el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
-                });
-            };
-            gallery.querySelectorAll('img').forEach(function (item) {
-                // item.classList.add('byebye');
-
-                item.addEventListener('load', function () {
-                    var altura = getVal(gallery, 'grid-auto-rows');
-                    var gap = getVal(gallery, 'grid-row-gap');
-                    var gitem = item.parentElement.parentElement;
-                    gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-                    item.classList.remove('byebye');
-                });
-
+            var recentProjectsSlider = new Swiper('.__js_recent-projects-slider', {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                loop: true,
+                navigation: {
+                    nextEl: '.recent-projects__button--next',
+                    prevEl: '.recent-projects__button--prev'
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2
+                    },
+                    1200: {
+                        slidesPerView: 3
+                    }
+                }
             });
-            window.addEventListener('resize', resizeAll);
-            gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-                item.addEventListener('click', function () {
-                    item.classList.toggle('full');
-                });
-            });
-
         </script>
 </body>
-
 </html>

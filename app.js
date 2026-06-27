@@ -40,6 +40,9 @@ app.get('/articles', (req, res) => {
     res.status(200).render(path.join(__dirname, '/views/articles.ejs'))
 
 })
+app.get('/gallery', (req, res) => {
+    res.status(200).render(path.join(__dirname, '/views/gallery.ejs'))
+})
 app.get('*', (req, res) => {
     res.status(200).render(path.join(__dirname, '/views/404.ejs'))
 })

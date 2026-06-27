@@ -1888,8 +1888,8 @@ textarea.custom-input {
 }
 
 #logo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #fff62b;
   display: flex;
@@ -1920,6 +1920,7 @@ textarea.custom-input {
 
 .logo__text {
   display: block;
+  margin-left: 16px;
   max-width: 110px;
   align-self: center;
   font-size: 25px;
